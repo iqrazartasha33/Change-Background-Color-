@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+    transition: background-color 0.5s ease;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    background-color: #007bff;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    z-index: 1;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0 10px #007bff, 0 0 20px #007bff, 0 0 30px #007bff, 0 0 40px #007bff;
+  }
+  
+  button::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #00ffcc, #007bff, #ff00ff, #ffcc00);
+    z-index: -1;
+    filter: blur(8px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  button:hover::before {
+    opacity: 1;
+  }
+  
